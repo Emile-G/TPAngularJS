@@ -20,7 +20,7 @@ export class AppComponent {
     {
        this.listeCourses = JSON.parse(localStorage.articles);
     }
-    this.listeCourses = this.articleProvider.listeCourses;
+    this.articleProvider.listeCourses = this.listeCourses;
   }
 
   onAjouter()
