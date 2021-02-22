@@ -1,0 +1,11 @@
+<td class="col-md-1"> {{ indice + 1}}</td>
+    <td class="col-md-6">
+        <h6 *ngIf="article.achete == false "> {{ article.nom }} </h6>
+        <h6><s *ngIf="article.achete == true ">{{ article.nom }} </s>  </h6>
+    </td>
+    <td class="col-md-5"> 
+        <button (click)="onAcheter()" class="btn btn-primary"> <i class="fa fa-check"> </i> </button> 
+        &nbsp; 
+        <button (click)="onSupprimer()" class="btn btn-danger"> <i class="fa fa-trash"> </i></button>
+    </td>
+<br>

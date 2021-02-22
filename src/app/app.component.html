@@ -1,0 +1,39 @@
+<!-- container container-fluid  -->
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+        <h1> Liste de courses</h1>
+          <br>
+          <div class="row">
+            <div class="col-md-10">
+              <input [(ngModel)]="name" class="form-control" >
+            </div>
+            <div class="col-md-2">
+              <button (click)="onAjouter()" class="btn btn-success">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+          </div>
+      <br>
+
+      <div class="row">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Articles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <app-article
+                *ngFor="let article of listeCourses; let i = index"
+                [article]="article" [indice]="i">
+              </app-article>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
