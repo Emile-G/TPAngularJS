@@ -28,14 +28,9 @@ export class AppComponent {
     let article = new Article(this.name, this.achete);
     if (article.nom.trim() != '') {
       this.listeCourses.push(article);
-      this.saveToLocalStorage();
+      this.articleProvider.saveToLocalStorage();
     };
     this.name = '';
     this.achete = false;
-  }
-
-  saveToLocalStorage()
-  {
-    localStorage.articles = JSON.stringify(this.listeCourses);
   }
 }

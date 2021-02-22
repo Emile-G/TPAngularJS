@@ -22,7 +22,6 @@ a:Article= new Article('',false);
   onSupprimer()
   {
     this.articleService.onSupprimerProvider(this.indice);
-
   }
 
   onAcheter()

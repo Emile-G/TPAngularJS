@@ -11,6 +11,7 @@ export class ArticleProvider{
     onSupprimerProvider(i:number)
     {
       this.listeCourses.splice(i,1);
+      this.saveToLocalStorage();
     }
    
     onAcheterProvider(i:number)
@@ -20,5 +21,10 @@ export class ArticleProvider{
       } else {
         this.listeCourses[i].achete = false;   
       }
+      this.saveToLocalStorage();
+    }
+    saveToLocalStorage()
+    {
+      localStorage.articles = JSON.stringify(this.listeCourses);
     }
 }
